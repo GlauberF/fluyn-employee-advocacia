@@ -16,6 +16,14 @@ Um arquivo, quatro minutos:
 Enquanto os marcadores estiverem lá, o funcionário foi instruído a **perguntar**
 o dado que falta, e nunca a inventar um nome ou um número de OAB plausível.
 
+E um bloco de memória, que **ainda não sobe sozinho**:
+
+- **`memory/escritorio-guardrails.md`** precisa ser copiado à mão para a tela de
+  edição do funcionário, com o label `escritorio/guardrails`. O carregador de
+  template não lê a pasta `memory/` hoje, e chave desconhecida no
+  `manifest.json` é ignorada em silêncio. O `memory/README.md` explica o porquê
+  e o que fazer quando a plataforma passar a suportar.
+
 ## O que tem aqui
 
 | Skill | Para quê |
@@ -25,6 +33,10 @@ o dado que falta, e nunca a inventar um nome ou um número de OAB plausível.
 | `defesa-processual` | Montar contestação a partir da inicial, cruzando causa de pedir com pedido e com liminar. |
 | `ditado-para-roteiro` | Ditado ou reunião vira roteiro organizado, e o plano de ação vira tarefa no quadro. |
 | `triagem-de-publicacao` | Extrato de publicação vira triagem estruturada com partes, ato e prazo. |
+
+Mais um bloco de memória em `memory/`, para o que precisa valer **quando nenhuma
+skill carrega**: não citar lei de memória, prazo é do advogado, qualificação sai
+do arquivo e não da cabeça.
 
 ## O que NÃO tem, e por quê
 
