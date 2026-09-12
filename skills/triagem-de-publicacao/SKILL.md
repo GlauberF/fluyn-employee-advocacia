@@ -70,3 +70,16 @@ andamento, quem ensina isso é a skill `portais-tribunal-br`.
 Se a publicação gerar trabalho com data, ofereça abrir a tarefa no quadro com
 `manage_tasks`, com o prazo **marcado como informação da publicação, ainda não
 conferida**. Ofereça, não abra sozinho.
+
+## Se ele quiser acompanhamento contínuo
+
+Triagem é de UMA publicação que já chegou. "Me avisa sempre que sair algo desse
+processo" é outra coisa: é vigilância recorrente, e é a skill
+`dados-publicos-br` que manda nela, nas seções "Antes de agendar, confirme com o
+usuário o que você vai vigiar" e "Agendar rotina de vigilância".
+
+Vá para lá, e não monte a tarefa recorrente daqui. Aquela skill carrega
+exigências que não são óbvias, como criar a tarefa dentro da conversa de quem
+vai receber o alerta e usar janela de consulta desde a última execução. Tarefa
+recorrente errada não avisa que está errada: ela roda por semanas vigiando a
+coisa errada, e o usuário só descobre quando perde um prazo.
