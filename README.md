@@ -7,36 +7,33 @@ skills daqui para dentro da instância.
 
 ## Antes de usar, preencha
 
-Um arquivo, quatro minutos:
+Os dados do escritório **não ficam no Git**, ficam em blocos de memória do
+funcionário. O repositório versiona o **esqueleto** de cada bloco, em `memory/`,
+e os valores você digita na tela de edição do funcionário.
 
-- **`skills/escritorio/advogado.md`** tem sete campos marcados com
-  `<!-- PREENCHER -->`: nome, OAB, e-mail e telefone do advogado, mais razão
-  social, CNPJ e endereço do escritório.
+Dois blocos para criar, copiando o conteúdo dos arquivos:
 
-Enquanto os marcadores estiverem lá, o funcionário foi instruído a **perguntar**
-o dado que falta, e nunca a inventar um nome ou um número de OAB plausível.
+| Arquivo | Nome do bloco | O que preencher |
+|---|---|---|
+| `memory/escritorio_advogado.mdx` | `escritorio/advogado` | Os sete campos `PREENCHER`, mais outras OABs se houver. |
+| `memory/escritorio_guardrails.mdx` | `escritorio/guardrails` | Nada, o conteúdo já vai pronto. |
 
-E um bloco de memória, que **ainda não sobe sozinho**:
-
-- **`memory/escritorio_guardrails.mdx`** precisa ser copiado à mão para a tela de
-  edição do funcionário, com o label `escritorio/guardrails`. O carregador de
-  template não lê a pasta `memory/` hoje, e chave desconhecida no
-  `manifest.json` é ignorada em silêncio. O `memory/README.md` explica o porquê
-  e o que fazer quando a plataforma passar a suportar.
+Enquanto um campo estiver como `PREENCHER`, o funcionário foi instruído a
+**perguntar** o dado, e nunca a inventar um nome ou um número de OAB plausível.
 
 ## O que tem aqui
 
 | Skill | Para quê |
 |---|---|
-| `escritorio` | Honorários por faixa, título e descrição para o sistema de controle, quem é o advogado, como entregar documento longo. |
+| `escritorio` | Honorários por faixa, título e descrição para o sistema de controle, como entregar documento longo. Aponta para o bloco `escritorio/advogado` quando precisa qualificar. |
 | `auditoria-de-contrato` | Revisar contrato pronto atrás de erro mecânico: numeração, referência cruzada, valor por extenso, placeholder, termo definido. |
 | `defesa-processual` | Montar contestação a partir da inicial, cruzando causa de pedir com pedido e com liminar. |
 | `ditado-para-roteiro` | Ditado ou reunião vira roteiro organizado, e o plano de ação vira tarefa no quadro. |
 | `triagem-de-publicacao` | Extrato de publicação vira triagem estruturada com partes, ato e prazo. |
 
-Mais um bloco de memória em `memory/`, para o que precisa valer **quando nenhuma
-skill carrega**: não citar lei de memória, prazo é do advogado, qualificação sai
-do arquivo e não da cabeça.
+Mais dois blocos de memória em `memory/`, para o que precisa valer **quando
+nenhuma skill carrega**: quem é o advogado, e os guardrails de não citar lei de
+memória e não assumir prazo.
 
 ## O que NÃO tem, e por quê
 
@@ -51,8 +48,9 @@ Subagente sem uma skill dizendo quando acioná-lo fica no disco sem uso.
 
 **Sem `vault.json`.** Nenhuma skill daqui chama API externa, então não há chave
 a declarar. E os dados do advogado **não** são segredo: nome, OAB e endereço são
-públicos e vão impressos em toda peça, por isso ficam em `advogado.md` e não no
-cofre. O cofre também não serviria: o agente nunca lê o valor de um placeholder,
+públicos e vão impressos em toda peça, por isso ficam no bloco de memória
+`escritorio/advogado` e não no cofre. O cofre também não serviria: o agente
+nunca lê o valor de um placeholder,
 ele só escreve `{{CHAVE}}` e o proxy troca na saída HTTP. Numa petição, o
 `{{CHAVE}}` sairia literal.
 

@@ -85,4 +85,33 @@ a divergir entre conversas. Regra da casa vai em `escritorio/`.
 
 | Arquivo | `label` | Para quê |
 |---|---|---|
-| `escritorio_guardrails.mdx` | `escritorio/guardrails` | Não citar lei de memória, prazo é do advogado, qualificação sai de `advogado.md`. |
+| `escritorio_advogado.mdx` | `escritorio/advogado` | Nome, OAB, contato e dados do escritório, que entram na qualificação de toda peça. |
+| `escritorio_guardrails.mdx` | `escritorio/guardrails` | Não citar lei de memória, prazo é do advogado, qualificação sai do bloco acima. |
+
+## Por que a identidade do advogado é bloco, e não arquivo de skill
+
+Ela já foi um `advogado.md` dentro da skill `escritorio`, e um teste na instância
+mostrou por que aquilo não servia. Pedimos ao funcionário que gravasse uma OAB
+de teste, ele editou o arquivo corretamente, e o dado **morreria na próxima
+sincronização do repositório**, porque arquivo de skill é sobrescrito.
+
+Três razões, na ordem em que pesam:
+
+1. **Bloco sobrevive à sync**, arquivo de skill não.
+2. **Bloco já está no contexto.** Com o arquivo, cada pergunta sobre a OAB
+   gastava uma chamada de `Read`, e nós vimos isso acontecer.
+3. **Este repositório pode ser apontado para outro funcionário ou outro
+   escritório.** A OAB de um advogado específico não tem por que viajar junto
+   com o método.
+
+### `read_only` ficou desligado, de propósito
+
+Bloco aceita `read_only`, e ele é aplicado de verdade (o `core_tool_executor` do
+fluyn-server recusa toda mutação de memória sobre bloco marcado, e o
+`ensure_read_only_block_not_modified` é um segundo portão).
+
+Deixamos **desligado** por enquanto, para o funcionário poder corrigir um dado
+quando o advogado avisar. O risco aceito é que ele reescreva a própria OAB num
+turno confuso, e a peça saia assinada com número errado. Se isso preocupar, o
+conserto é ligar o `read_only` no bloco `escritorio/advogado`, e aí só humano
+edita.

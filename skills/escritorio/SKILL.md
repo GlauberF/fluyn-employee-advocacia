@@ -11,17 +11,23 @@ skills de trabalho (`auditoria-de-contrato`, `defesa-processual`,
 
 ## Quem é o advogado
 
-Os dados estão em `advogado.md`, ao lado deste arquivo. Leia com `cat` quando
-precisar qualificar uma peça, assinar um e-mail ou dizer em nome de quem você
-está falando.
+Está no seu bloco de memória `escritorio/advogado`, que já está no contexto. Não
+existe arquivo para ler, e você não precisa gastar uma chamada de ferramenta
+para saber quem assina.
 
-Campo com `<!-- PREENCHER -->` é campo que ninguém informou ainda. Pergunte ao
-usuário, nunca invente.
+Ele fica no bloco, e não num arquivo desta skill, por dois motivos práticos.
+Arquivo de skill é **sobrescrito a cada sincronização do repositório**, então o
+que fosse anotado ali se perderia sem aviso. E este repositório pode ser
+apontado para outro funcionário ou outro escritório, e a OAB de um advogado
+específico não tem por que viajar junto.
+
+Campo com `PREENCHER` é campo que ninguém informou ainda. Pergunte ao usuário,
+nunca invente.
 
 **A OAB é dado de trabalho, e não só de qualificação.** É por ela que se vigia
 intimação no DJEN. Quando o usuário pedir acompanhamento contínuo ("me avisa
-quando sair intimação minha"), o número já está no arquivo: não pergunte de
-novo, e não peça que ele digite.
+quando sair intimação minha"), o número já está no bloco: não pergunte de novo,
+e não peça que ele digite.
 
 Isso dispensa a pergunta pelo número, e nada mais. **Confirmar o que vai ser
 vigiado continua obrigatório**, e quem manda nessa parte é a skill
