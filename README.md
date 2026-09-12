@@ -18,7 +18,7 @@ o dado que falta, e nunca a inventar um nome ou um número de OAB plausível.
 
 E um bloco de memória, que **ainda não sobe sozinho**:
 
-- **`memory/escritorio-guardrails.md`** precisa ser copiado à mão para a tela de
+- **`memory/escritorio_guardrails.mdx`** precisa ser copiado à mão para a tela de
   edição do funcionário, com o label `escritorio/guardrails`. O carregador de
   template não lê a pasta `memory/` hoje, e chave desconhecida no
   `manifest.json` é ignorada em silêncio. O `memory/README.md` explica o porquê
