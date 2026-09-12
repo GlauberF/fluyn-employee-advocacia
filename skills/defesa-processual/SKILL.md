@@ -72,9 +72,9 @@ Diga qual dos três, com o motivo:
 
 ## Fase 6, redação
 
-Só agora se escreve. Vá **por seção**, como a skill `escritorio` descreve na
-seção "Entrega de documento longo": uma seção, aprovação, próxima. Cada seção
-segue o que foi decidido na Fase 4 para aquele item.
+Só agora se escreve. Vá **por seção**, como o bloco `escritorio/padroes`
+descreve: uma seção, aprovação, próxima. Cada seção segue o que foi decidido na
+Fase 4 para aquele item.
 
 ## Guardrails
 

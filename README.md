@@ -16,6 +16,8 @@ Dois blocos para criar, copiando o conteúdo dos arquivos:
 | Arquivo | Nome do bloco | O que preencher |
 |---|---|---|
 | `memory/escritorio_advogado.mdx` | `escritorio/advogado` | Os sete campos `PREENCHER`, mais outras OABs se houver. |
+| `memory/escritorio_honorarios.mdx` | `escritorio/honorarios` | Nada, se a tabela 5/4/2 for a sua. Ajuste os percentuais se não for. |
+| `memory/escritorio_padroes.mdx` | `escritorio/padroes` | Nada, se os limites 100 e 550 forem os do seu sistema. |
 | `memory/escritorio_guardrails.mdx` | `escritorio/guardrails` | Nada, o conteúdo já vai pronto. |
 
 Enquanto um campo estiver como `PREENCHER`, o funcionário foi instruído a
@@ -25,15 +27,15 @@ Enquanto um campo estiver como `PREENCHER`, o funcionário foi instruído a
 
 | Skill | Para quê |
 |---|---|
-| `escritorio` | Honorários por faixa, título e descrição para o sistema de controle, como entregar documento longo. Aponta para o bloco `escritorio/advogado` quando precisa qualificar. |
 | `auditoria-de-contrato` | Revisar contrato pronto atrás de erro mecânico: numeração, referência cruzada, valor por extenso, placeholder, termo definido. |
 | `defesa-processual` | Montar contestação a partir da inicial, cruzando causa de pedir com pedido e com liminar. |
 | `ditado-para-roteiro` | Ditado ou reunião vira roteiro organizado, e o plano de ação vira tarefa no quadro. |
 | `triagem-de-publicacao` | Extrato de publicação vira triagem estruturada com partes, ato e prazo. |
 
-Mais dois blocos de memória em `memory/`, para o que precisa valer **quando
-nenhuma skill carrega**: quem é o advogado, e os guardrails de não citar lei de
-memória e não assumir prazo.
+As skills são **método**. Tudo que é **constante deste escritório** (quem é o
+advogado, a tabela de honorários, os formatos do sistema de controle, os
+guardrails) vive em bloco de memória, em `memory/`, porque o advogado muda isso
+ao longo do tempo e arquivo de skill é sobrescrito a cada sincronização.
 
 ## O que NÃO tem, e por quê
 

@@ -86,11 +86,30 @@ a divergir entre conversas. Regra da casa vai em `escritorio/`.
 | Arquivo | `label` | Para quê |
 |---|---|---|
 | `escritorio_advogado.mdx` | `escritorio/advogado` | Nome, OAB, contato e dados do escritório, que entram na qualificação de toda peça. |
-| `escritorio_guardrails.mdx` | `escritorio/guardrails` | Não citar lei de memória, prazo é do advogado, qualificação sai do bloco acima. |
+| `escritorio_honorarios.mdx` | `escritorio/honorarios` | A tabela por faixa e como aplicá-la. |
+| `escritorio_padroes.mdx` | `escritorio/padroes` | Título e descrição para o sistema de controle, e entrega de documento longo por seção. |
+| `escritorio_guardrails.mdx` | `escritorio/guardrails` | Não citar lei de memória, prazo é do advogado, qualificação sai do bloco do advogado. |
+
+## A linha entre repositório e painel
+
+**Repositório é método. Painel é constante deste escritório.**
+
+As quatro skills ensinam a auditar um contrato, montar uma defesa, organizar um
+ditado e triar uma publicação. Isso não muda quando o escritório muda de tabela
+de honorários, e é revisável em pull request.
+
+Os quatro blocos guardam o que **este** escritório decidiu e pode redecidir a
+qualquer momento: quem assina, quanto cobra, em que formato cadastra, o que
+nunca faz. O advogado altera no painel, sem tocar em Git e sem esperar deploy.
+
+Existiu uma skill `escritorio` que misturava as duas coisas. Ela foi dissolvida
+nestes blocos, porque toda seção dela era constante e não método, e constante em
+arquivo de skill tem dois defeitos: é sobrescrita na sincronização, e obriga uma
+chamada de ferramenta para ser lida.
 
 ## Por que a identidade do advogado é bloco, e não arquivo de skill
 
-Ela já foi um `advogado.md` dentro da skill `escritorio`, e um teste na instância
+Ela já foi um `advogado.md` dentro de uma skill, e um teste na instância
 mostrou por que aquilo não servia. Pedimos ao funcionário que gravasse uma OAB
 de teste, ele editou o arquivo corretamente, e o dado **morreria na próxima
 sincronização do repositório**, porque arquivo de skill é sobrescrito.
