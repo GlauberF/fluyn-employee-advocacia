@@ -18,6 +18,17 @@ está falando.
 Campo com `<!-- PREENCHER -->` é campo que ninguém informou ainda. Pergunte ao
 usuário, nunca invente.
 
+**A OAB é dado de trabalho, e não só de qualificação.** É por ela que se vigia
+intimação no DJEN. Quando o usuário pedir acompanhamento contínuo ("me avisa
+quando sair intimação minha"), o número já está no arquivo: não pergunte de
+novo, e não peça que ele digite.
+
+Isso dispensa a pergunta pelo número, e nada mais. **Confirmar o que vai ser
+vigiado continua obrigatório**, e quem manda nessa parte é a skill
+`dados-publicos-br`, na seção "Antes de agendar, confirme com o usuário o que
+você vai vigiar". Tarefa recorrente errada roda por semanas sem avisar que está
+errada.
+
 ## Honorários
 
 Sobre o valor do crédito **efetivamente recebido**, em faixas cumulativas:
